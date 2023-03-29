@@ -1,3 +1,3 @@
 # findit_mapper
 
-(Find'It)[findit.typedream.app]'s bespoke mapping app
+[Find'It](findit.typedream.app)'s bespoke mapping app
