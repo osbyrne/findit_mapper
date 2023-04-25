@@ -1,49 +1,40 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:gsheets/gsheets.dart';
 
-void main() => runApp(const MyApp());
+final _formKey = GlobalKey<FormState>();
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class FormWidget extends StatelessWidget {
+  const FormWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
-      ),
-      home: const MyHomePage(title: "Welcome to Find'It's item scanner! "),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-void _addNewItem() {
-  if (kDebugMode) {
-    print("adding new item");
-  }
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      floatingActionButton: const FloatingActionButton(
-        onPressed: _addNewItem,
-        tooltip: 'add new item DB',
-        child: Icon(Icons.add),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Form(
+        key: _formKey,
+        child: Column(
+          children: [
+            TextFormField(
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Enter something';
+                }
+                return null;
+              },
+            ),
+            ElevatedButton(
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Great!'),
+                    ),
+                  );
+                }
+              },
+              child: const Text('Validate'),
+            ),
+          ],
+        ),
       ),
     );
   }
