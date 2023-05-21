@@ -1,7 +1,7 @@
 import 'dart:core';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:gsheets/gsheets.dart';
 import 'item.dart';
 
 void main() => runApp(const MainPage());
@@ -91,7 +91,7 @@ class MyCustomFormState extends State<MyCustomForm> {
               if (value == null || value.isEmpty) {
                 return "Entrez le nom de l'article";
               }
-              if (value.length < 30) {
+              if (value.length > 30) {
                 return "Entrez un nom plus court";
               }
               return null;
@@ -105,17 +105,46 @@ class MyCustomFormState extends State<MyCustomForm> {
               if (value == null || value.isEmpty) {
                 return "Entrez la description de l'article";
               }
-              if (value.length < 50) {
+              if (value.length > 50) {
                 return "Entrez un nom plus court";
               }
               return null;
             },
             onSaved: (val) => setState(() => _item.description = val),
           ),
-          //TODO need other fields
-
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Text('indice de consomation'),
+              Radio(
+                value: 'Faible',
+                groupValue: _item.indiceDeConsomation,
+                onChanged: (value) {
+                  setState(() {
+                    _item.indiceDeConsomation = 'Faible';
+                  });
+                },
+              ),
+              const Text('Faible'),
+              Radio(
+                value: 'Fort',
+                groupValue: _item.indiceDeConsomation,
+                onChanged: (value) {
+                  setState(() {
+                    _item.indiceDeConsomation = 'Fort';
+                  });
+                },
+              ),
+              const Text('Fort'),
+            ],
+          ),
           ElevatedButton(
             onPressed: () {
+              if (kDebugMode) {
+                print(_item.nom);
+                print(_item.description);
+                print(_item.indiceDeConsomation);
+              }
               if (_formKey.currentState!.validate()) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(

@@ -6,4 +6,10 @@ class Item {
   String? imageLink = '';
   String? twoDLink = '';
   String? threeDLink = '';
+  String? commandePlat = '';
+  int? stockReserve = 0;
+  int? stockLimite = 0;
+  int? quantiteRemonter = 0;
+  bool? stockBas = false;
+  bool? nextRemonter = false;
 }
