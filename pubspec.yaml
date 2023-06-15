@@ -10,6 +10,10 @@ dependencies:
   flutter:
     sdk: flutter
   gsheets: ^0.4.2
+  cupertino_icons: ^1.0.2
+  firebase_core: ^2.14.0
+  firebase_auth: ^4.2.0
+  google_sign_in: ^6.1.4
 
 dev_dependencies:
   flutter_test:
@@ -19,3 +23,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - lib/images/google.png

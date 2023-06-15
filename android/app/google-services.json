@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "934645182621",
+    "project_id": "primordial-gate-383309",
+    "storage_bucket": "primordial-gate-383309.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934645182621:android:0eea6467e4980be9836474",
+        "android_client_info": {
+          "package_name": "com.example.findit_mapper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934645182621-2rq5b61n94k9t8eurbquksmra30kr10p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMfAe72vvv9_GJnw_W1HOcfBMpxEJwydA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934645182621-2rq5b61n94k9t8eurbquksmra30kr10p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "934645182621-a1bne4l0311a05n04hmnelns8vsknge2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.finditMapper"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,15 +1,22 @@
 class Item {
-  String? nom = '';
-  String? description = '';
-  String? reference = '';
-  String? indiceDeConsomation = '';
-  String? imageLink = '';
-  String? twoDLink = '';
-  String? threeDLink = '';
-  String? commandePlat = '';
-  int? stockReserve = 0;
-  int? stockLimite = 0;
-  int? quantiteRemonter = 0;
-  bool? stockBas = false;
-  bool? nextRemonter = false;
+  var nom = '';
+  var description = '';
+  var reference = '';
+  var commandePlat = '';
+  
+  var imageLink = '';
+  var twoDLink = '';
+  var threeDLink = '';
+
+  var indiceDeConsomation = '';
+  var stockReserve = 0;
+  var stockLimite = 0;
+  var quantiteRemonter = 0;
+  var stockBas = false;
+  var nextRemonter = false;
+
+  @override
+  String toString() {
+    return "hey";
+  }
 }
