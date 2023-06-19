@@ -1,5 +1,4 @@
-import 'package:findit_mapper/services/auth.dart';
-import 'package:findit_mapper/square_tile.dart';
+import 'package:findit_mapper/components/square_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -26,6 +25,7 @@ class _LoginPageState extends State<LoginPage> {
     );
     await FirebaseAuth.instance
         .signInWithEmailAndPassword(email: "", password: "");
+    // ignore: use_build_context_synchronously
     Navigator.pop(context);
   }
 
@@ -33,19 +33,19 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      body: SafeArea(
+      body: const SafeArea(
         child: Center(
           child: Column(
             children: [
-              const SizedBox(height: 50),
+              SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SquareTile(
-                      imagePath: 'lib/images/google.png',
-                      onTap: () => AuthService().SignInWithGoogle())
+                    imagePath: 'lib/images/google.png',
+                  ),
                 ],
-              )
+              ),
             ],
           ),
         ),
