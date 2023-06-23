@@ -1,13 +1,14 @@
-# findit_mapper
+# Mapper
 
-Open Source Flutter app built to run operations at https://findit.typedream.app
+leveraging mobile to accelerate operations at https://findit.typedream.app
 
 features:
 
 - [] login
 - [] logout
-- [] Gsheets connection
+- [] Google sheets connection
 - [] scanner
 - [] check for duplicates
 - [] offline cache
 - [] integrated 2D mapper
+- [] integrated 3D mapper

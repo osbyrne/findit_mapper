@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import '../components/auth.dart';
 import 'home.dart';
 import 'login.dart';
 
@@ -15,9 +14,7 @@ class AuthPage extends StatelessWidget {
           if (snapshot.hasData) {
             return HomePage();
           } else {
-            return LoginPage(
-              onTap: () => AuthService().signInWithGoogle(),
-            );
+            return const LoginPage();
           }
         },
         stream: FirebaseAuth.instance.authStateChanges(),

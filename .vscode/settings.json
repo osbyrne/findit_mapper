@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "C:/Users/osbyr/Documents/code/findit_mapper/build/windows/extracted/firebase_cpp_sdk"
+    "cmake.sourceDirectory": "C:/Users/osbyr/Documents/code/findit_mapper/build/windows/extracted/firebase_cpp_sdk",
+    "DockerRun.DisableDockerrc": true
 }
