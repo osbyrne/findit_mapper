@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'pages/login.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'page/auth.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -16,9 +16,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      title: "findit mapper", 
+      theme: ThemeData(),
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: AuthPage(),
     );
   }
 }
