@@ -3,4 +3,23 @@ include: package:lints/recommended.yaml
 linter:
   rules:
     - cancel_subscriptions
+    - unnecessary_const
+    - prefer_const_literals_to_create_immutables
+    - prefer_const_constructors_in_immutables
+    - prefer_const_constructors
+    - avoid_empty_else
+    - prefer_const_declarations
+    - avoid_print
+    - avoid_relative_lib_imports
+    - prefer_relative_imports
+    - prefer_void_to_null
+    - always_declare_return_types 
+    - always_put_control_body_on_new_line 
+    - always_put_required_named_parameters_first 
+    - always_specify_types 
 
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true

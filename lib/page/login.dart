@@ -11,7 +11,7 @@ class LoginPage extends StatelessWidget {
         child: SafeArea(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: <Widget>[
               GestureDetector(
                 onTap: () => AuthService().signInWithGoogle(),
                 child: Image.asset('lib/images/google.png', height: 40),

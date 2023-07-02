@@ -5,7 +5,7 @@ import 'new_item_form.dart';
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
-  final user = FirebaseAuth.instance.currentUser!;
+  final User user = FirebaseAuth.instance.currentUser!;
 
   void signUserOut() => FirebaseAuth.instance.signOut();
 
@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Logged in as ${user.email!}'),
-        actions: [
+        actions: <Widget>[
           IconButton(
             onPressed: signUserOut,
             icon: const Icon(Icons.logout),
@@ -27,7 +27,9 @@ class HomePage extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => NewItem()),
+              MaterialPageRoute<Widget>(
+                builder: (BuildContext context) => const NewItem(),
+              ),
             );
           },
         ),
